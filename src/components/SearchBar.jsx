@@ -1,13 +1,17 @@
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { useContext } from 'react'
 import DataContext from '../context/DataContext'
+import { Box } from '@mui/material'
 
 const SearchBar = () => {
   const { placesKey, autoComplete, setAutoComplete } = useContext(DataContext)
 
+  const searchStyle = {
+    minWidth: '300px',
+  }
+
   return (
-    <>
-      <h2>SearchBar</h2>
+    <Box sx={searchStyle}>
       <GooglePlacesAutocomplete
         selectProps={{
           autoComplete,
@@ -16,7 +20,7 @@ const SearchBar = () => {
         }}
         apiKey={placesKey}
       />
-    </>
+    </Box>
   )
 }
 
