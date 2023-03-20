@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <DataProvider>
         <Container sx={containerStyle}>
-          <Typography variant="h2">Weather App</Typography>
+          <Typography variant="h3">Ever Weather</Typography>
           <SearchBar />
           <MuiCard index={0} />
         </Container>
